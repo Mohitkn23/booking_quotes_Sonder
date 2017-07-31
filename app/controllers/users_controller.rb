@@ -25,7 +25,6 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    @user.unit_id = Unit.first #Hard-Code kiya hai
     if @user.save
       flash[:notice] = "Article was successfully created."
       redirect_to user_path(@user) #Redirected to show.html.erb

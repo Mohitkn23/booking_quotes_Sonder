@@ -1,0 +1,47 @@
+<%= form_with(model: inquiry, local: true) do |form| %>
+  <% if inquiry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(inquiry.errors.count, "error") %> prohibited this inquiry from being saved:</h2>
+
+      <ul>
+      <% inquiry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+<%- #Form Creation Code %>
+
+<%= form_for @inquiry do |f| %>
+  <p>
+    <%= f.label :checkin %><br />
+    <%= f.date_field :checkin %>
+  </p>
+  <p>
+    <%= f.label :checkout %><br />
+    <%= f.date_field :checkout %>
+  </p>
+  <p>
+    <%= f.label :total %><br />
+    <%= f.number_field :total%>
+  </p>
+    <%= f.fields_for :user do |u| %>
+  <p>
+    <%= u.label :firstname %><br />
+    <%= u.text_field :firstname%>
+  </p>
+  <p>
+    <%= u.label :lastname %><br />
+    <%= u.text_field :lastname %>
+  </p>
+  <p>
+    <%= u.label :email %><br />
+    <%= u.text_field :email%>
+  </p>
+  <p class="actions">
+    <%= form.submit %>
+  </p>
+  <% end %>
+<% end %>
+<% end %>

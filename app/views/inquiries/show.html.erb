@@ -1,0 +1,18 @@
+<h1>Showing the newly created User.</h1>
+
+<p>
+  Check-In: <%= @inquiry.checkin %>
+</p>
+
+<p>
+  Check-Out: <%= @inquiry.checkout %>
+</p>
+
+<p>
+  Total: <%= @inquiry.total %>
+</p>
+<p>
+  First Name: <%= @user.firstname %>
+</p>
+
+<%= link_to 'HomePage', users_path %>

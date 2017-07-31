@@ -1,4 +1,4 @@
-<h1>Showing the newly created Inquiry.</h1>
+<h1>Showing the newly created User.</h1>
 
 <p>
   First Name: <%= @user.firstname %>
@@ -12,12 +12,4 @@
   Email: <%= @user.email %>
 </p>
 
-<p>
-   Check-In: <%= @user.checkin %>
-</p>
-
-<p>
-  Check-Out: <%= @user.checkout %>
-</p>
-
-
+<%= link_to 'HomePage', users_path %>

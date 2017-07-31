@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing all the Inquiries</h1>
+<h1>Listing all the Users</h1>
 
 <table>
   <thead>
@@ -8,14 +8,15 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
-      <th>Ad_name</th>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= link_to 'Show', user %></td>
+        <td><%= user.firstname %></td>
+        <td><%= user.lastname %></td>
+        <td><%= user.email %></td>    
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -25,4 +26,5 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path %> |
+<%= link_to 'Customer Support HomePage', root_path %>

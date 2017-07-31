@@ -28,15 +28,7 @@
       <%= f.text_field :email%>
     </p>
     <p>
-      <%= f.label :checkin %><br />
-      <%= f.date_select :checkin%>
-    </p>
-    <p>
-      <%= f.label :checkout %><br />
-      <%= f.date_select :checkout%>
-    </p>
-    <p>
-      <%= f.submit %>
+      <%= link_to "Create Inquiry", new_inquiry_path %>
     </p>
   <% end %>
 <% end %>

@@ -1,0 +1,30 @@
+<%= form_with(model: unit, local: true) do |form| %>
+  <% if unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(unit.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% unit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+  <%- #Form Creation Code %>
+  <%= form_for @unit do |f| %>
+
+    <p>
+      <%= f.label :ad_name %><br />
+      <%= f.text_field :ad_name%>
+    </p>
+    <p>
+      <%= f.label :tax_percent %><br />
+      <%= f.number_field :tax_percent %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+<% end %>

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :units, inverse_of: :user #Since the relation is user 1--> many articles 
+  has_many :inquiries 
   before_save { self.email = email.downcase } #To store all the emails in DB in down/lowercase
   #User validation. Must always be present, Must be unique and 
   #the length should be between 3 & 50 characters included.
