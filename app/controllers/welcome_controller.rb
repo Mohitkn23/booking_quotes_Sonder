@@ -4,7 +4,4 @@ class WelcomeController < ApplicationController
     
   end
   
-  def new_registration
-    
-  end
 end
